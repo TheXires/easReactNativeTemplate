@@ -1,20 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { DarkTheme, DefaultTheme } from '@react-navigation/native';
+import * as Localization from 'expo-localization';
+import I18n from 'i18n-js';
+import React from 'react';
+import { StatusBar, useColorScheme } from 'react-native';
+import { de, en } from './src/i18n';
+import { Navigation } from './src/navigation';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+  const theme = useColorScheme();
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  I18n.fallbacks = true;
+  // eslint-disable-next-line sort-keys
+  I18n.translations = { en, de };
+  I18n.locale = Localization.locale;
+
+  const barStyle = theme === 'dark' ? 'light-content' : 'dark-content';
+  const backgroundColor = theme === 'dark' ? DarkTheme.colors.card : DefaultTheme.colors.card;
+
+  return (
+    <>
+      <StatusBar barStyle={barStyle} backgroundColor={backgroundColor} />
+      <Navigation />
+    </>
+  );
+};
