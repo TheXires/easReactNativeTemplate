@@ -15,7 +15,7 @@ The following functionalities are already set up.
 
 Setup
 -
-1.  Projekt kopieren
-2. Projektnamen in package.json und app.json anpassen
-3. Version in package.json und app.json anpassen
-4. Primärfarbe in src/theme/colors.ts anpassen
+1. Copy project
+2. Adjust project name in package.json and app.json
+3. Adjust version in package.json and app.json
+4. Customize primary color in src/theme/colors.ts
