@@ -19,3 +19,5 @@ Setup
 2. Adjust project name in package.json and app.json
 3. Adjust version in package.json and app.json
 4. Customize primary color in src/theme/colors.ts
+5. ````npm install````
+6. ````npm start```` or ````npm build```` + ````npm run dev```` if a custom expo client is needed because of native dependencies
