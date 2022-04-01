@@ -10,7 +10,6 @@ The following functionalities are already set up.
 - Localization
 - Dark mode
 - Prettier
-- ESLint
 
 
 Setup

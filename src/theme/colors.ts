@@ -7,6 +7,7 @@ export const MyLightTheme: Theme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
+    // TODO change primary color here
     primary: '#6666FF',
   },
 };
@@ -17,6 +18,7 @@ export const MyLightTheme: Theme = {
 export const MyDarkTheme: Theme = {
   ...DarkTheme,
   colors: {
+    // TODO change primary color here
     ...DarkTheme.colors,
     primary: '#6666FF',
   },
@@ -26,6 +28,7 @@ export const MyDarkTheme: Theme = {
  * Theme colors that are permanent and do not change with system theme
  */
 export const permanentColors = {
+  // TODO change primary color here
   primary: '#6666FF',
   text: '#ffffff',
   textDark: '#000000',
